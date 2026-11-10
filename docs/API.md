@@ -1,3 +1,7 @@
+<div align="center">
+<sub><a href="../README.md">← 返回主页</a> · <a href="../README.en.md">English</a></sub>
+</div>
+
 # HTTP API
 
 所有接口默认监听 `:18760`（可用 `python run.py --port` 改）。

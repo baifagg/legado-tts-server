@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Legado TTS Server">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0D10"/>
+      <stop offset="1" stop-color="#161A20"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D9A05B" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#D9A05B" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#D9A05B" stop-opacity="0.25"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#grid)"/>
+
+  <!-- 右侧声波：模拟一段中文朗读的包络 -->
+  <g transform="translate(690,150)" opacity="0.95">
+    <g fill="#D9A05B" fill-opacity="0.85">
+      <rect x="0"    y="-14" width="3" height="28"  rx="1.5"/>
+      <rect x="10"   y="-26" width="3" height="52"  rx="1.5"/>
+      <rect x="20"   y="-42" width="3" height="84"  rx="1.5"/>
+      <rect x="30"   y="-22" width="3" height="44"  rx="1.5"/>
+      <rect x="40"   y="-58" width="3" height="116" rx="1.5"/>
+      <rect x="50"   y="-34" width="3" height="68"  rx="1.5"/>
+      <rect x="60"   y="-70" width="3" height="140" rx="1.5"/>
+      <rect x="70"   y="-46" width="3" height="92"  rx="1.5"/>
+      <rect x="80"   y="-88" width="3" height="176" rx="1.5"/>
+      <rect x="90"   y="-30" width="3" height="60"  rx="1.5"/>
+      <rect x="100"  y="-62" width="3" height="124" rx="1.5"/>
+      <rect x="110"  y="-104" width="3" height="208" rx="1.5"/>
+      <rect x="120"  y="-40" width="3" height="80"  rx="1.5"/>
+      <rect x="130"  y="-76" width="3" height="152" rx="1.5"/>
+      <rect x="140"  y="-118" width="3" height="236" rx="1.5"/>
+      <rect x="150"  y="-52" width="3" height="104" rx="1.5"/>
+      <rect x="160"  y="-96" width="3" height="192" rx="1.5"/>
+      <rect x="170"  y="-66" width="3" height="132" rx="1.5"/>
+      <rect x="180"  y="-130" width="3" height="260" rx="1.5"/>
+      <rect x="190"  y="-44" width="3" height="88"  rx="1.5"/>
+      <rect x="200"  y="-84" width="3" height="168" rx="1.5"/>
+      <rect x="210"  y="-112" width="3" height="224" rx="1.5"/>
+      <rect x="220"  y="-58" width="3" height="116" rx="1.5"/>
+      <rect x="230"  y="-92" width="3" height="184" rx="1.5"/>
+      <rect x="240"  y="-36" width="3" height="72"  rx="1.5"/>
+      <rect x="250"  y="-70" width="3" height="140" rx="1.5"/>
+      <rect x="260"  y="-50" width="3" height="100" rx="1.5"/>
+      <rect x="270"  y="-24" width="3" height="48"  rx="1.5"/>
+      <rect x="280"  y="-38" width="3" height="76"  rx="1.5"/>
+      <rect x="290"  y="-16" width="3" height="32"  rx="1.5"/>
+      <rect x="300"  y="-26" width="3" height="52"  rx="1.5"/>
+      <rect x="310"  y="-10" width="3" height="20"  rx="1.5"/>
+    </g>
+    <line x1="-30" y1="0" x2="340" y2="0" stroke="url(#fade)" stroke-width="1" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- 文案 -->
+  <g font-family="Segoe UI, Helvetica Neue, PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <text x="72" y="112" fill="#F5F6F7" font-size="46" font-weight="650" letter-spacing="-1">Legado TTS Server</text>
+    <text x="72" y="158" fill="#9BA1AC" font-size="19" font-weight="400" letter-spacing="0.2">本地听书语音服务 · OmniVoice 0.8B · 20 个中文音色 · 完全离线</text>
+
+    <g transform="translate(72,196)" font-size="13" font-weight="500">
+      <rect x="0" y="0" width="104" height="30" rx="15" fill="#D9A05B" fill-opacity="0.12" stroke="#D9A05B" stroke-opacity="0.35"/>
+      <text x="52" y="20" fill="#D9A05B" text-anchor="middle">完全本地运行</text>
+
+      <rect x="116" y="0" width="92" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="162" y="20" fill="#C4C9D2" text-anchor="middle">不联网</text>
+
+      <rect x="220" y="0" width="104" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="272" y="20" fill="#C4C9D2" text-anchor="middle">2.14× 听书</text>
+
+      <rect x="336" y="0" width="128" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="400" y="20" fill="#C4C9D2" text-anchor="middle">NVIDIA / Apple / CPU</text>
+    </g>
+  </g>
+
+  <!-- 左下角细节线 -->
+  <line x1="72" y1="252" x2="360" y2="252" stroke="#D9A05B" stroke-opacity="0.28" stroke-width="1"/>
+</svg>

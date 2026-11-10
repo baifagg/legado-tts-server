@@ -1,3 +1,7 @@
+<div align="center">
+<sub><a href="README.md">← 返回主页</a> · <a href="README.en.md">English</a></sub>
+</div>
+
 # AGENTS.md · 给 AI Agent 的部署与排查手册
 
 > 这份文件是写给**自动化 agent** 的，不是写给人看的。目标是：你（agent）读完之后，

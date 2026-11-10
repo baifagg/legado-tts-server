@@ -1,3 +1,7 @@
+<div align="center">
+<sub><a href="../README.md">← 返回主页</a> · <a href="../README.en.md">English</a></sub>
+</div>
+
 # 排障指南（用户版）
 
 > 面向「不是开发者」的使用者。需要看代码/日志的深度排查在 [AGENTS.md §6](../AGENTS.md#6-故障目录症状--根因--修复)。

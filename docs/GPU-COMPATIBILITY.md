@@ -1,3 +1,7 @@
+<div align="center">
+<sub><a href="../README.md">← 返回主页</a> · <a href="../README.en.md">English</a></sub>
+</div>
+
 # 显卡兼容性 / 性能对照
 
 > 一句话：**有 NVIDIA 显卡最省事；Apple Silicon 体验很好；AMD 要折腾；Intel 和纯 CPU 能跑但慢。**

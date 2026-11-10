@@ -1,3 +1,7 @@
+<div align="center">
+<sub><a href="../README.md">← 返回主页</a> · <a href="../README.en.md">English</a></sub>
+</div>
+
 # 调参说明（每个默认值都是实测出来的）
 
 > 本项目的默认参数不是拍脑袋定的。每个都对应一轮 A/B 实测。

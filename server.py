@@ -851,7 +851,9 @@ async def console(request: Request):
     html = (CONSOLE_HTML
             .replace("__BASE__", base)
             .replace("__DEFAULT_REF__", DEFAULT_REF)
-            .replace("__REF_OPTIONS__", ref_opts))
+            .replace("__REF_OPTIONS__", ref_opts)
+            .replace("__SAPI_OPTION__",
+                     '<option value="sapi">本机离线 · 断网用</option>' if SAPI_AVAILABLE else ""))
     return HTMLResponse(html)
 
 
@@ -939,7 +941,7 @@ CONSOLE_HTML = """<!doctype html>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>听书 TTS</title>
 <style>
-  :root{--bg:#0e1014;--card:#161a21;--line:#252b36;--fg:#e8eaef;--dim:#8a93a6;--ok:#57d99b;--warn:#f0b849;--brand:#6f9dff}
+  :root{--bg:#0e1014;--card:#161a21;--line:#252b36;--fg:#e8eaef;--dim:#8a93a6;--ok:#57d99b;--warn:#f0b849;--brand:#d9a05b}
   *{box-sizing:border-box}
   body{margin:0;padding:16px;background:var(--bg);color:var(--fg);
        font:15px/1.65 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
@@ -953,7 +955,7 @@ CONSOLE_HTML = """<!doctype html>
   textarea{min-height:92px;resize:vertical;line-height:1.6}
   .row{display:flex;gap:10px}.row>*{flex:1}
   button{margin-top:13px;width:100%;padding:12px;border:0;border-radius:10px;
-       background:var(--brand);color:#08101f;font-weight:650;font-size:15px}
+       background:var(--brand);color:#0b0d10;font-weight:650;font-size:15px}
   button:active{opacity:.82}
   button.ghost{background:#242a35;color:#d3d9e6}
   audio{width:100%;margin-top:12px}
@@ -980,7 +982,7 @@ CONSOLE_HTML = """<!doctype html>
       <div><label>引擎</label>
         <select id="engine">
           <option value="omni">OmniVoice · 默认</option>
-          <option value="sapi">本机离线 · 断网用</option>
+          __SAPI_OPTION__
         </select></div>
       <div><label>语速（阅读内 2.5 为正常）</label>
         <input id="speed" type="number" step="0.1" value="2.5"></div>

@@ -1,3 +1,7 @@
+<div align="center">
+<sub><a href="../README.md">← 返回主页</a> · <a href="../README.en.md">English</a></sub>
+</div>
+
 # 音色清单
 
 > 20 个中文音色。**男声 10 + 女声 10**，覆盖 107–287 Hz 的基频范围。
