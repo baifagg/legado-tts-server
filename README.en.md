@@ -16,7 +16,7 @@ A Chinese text-to-speech service that runs on your own computer. A reading app o
 
 ## Easiest path: hand the repo to an AI agent
 
-You don't have to work through the commands yourself. Copy this line, together with the repo URL, into any assistant that can run shell commands — Claude Code, ChatGPT, DeepSeek, Codex, Cursor all work:
+You don't have to work through the commands yourself. Copy this line, together with the repo URL, into any assistant that can run shell commands (Claude Code, ChatGPT, DeepSeek, Codex, Cursor all work):
 
 > Set this project up for me, then give me the import link for my phone: https://github.com/baifagg/legado-tts-server
 

@@ -16,7 +16,7 @@ by [baifagg](https://github.com/baifagg)
 
 ## 最省事的办法：把仓库丢给 AI
 
-不用自己啃命令。复制下面这句话，连同仓库地址，发给任意一个能执行命令的助手 —— Claude Code、ChatGPT、DeepSeek、Codex、Cursor 都可以：
+不用自己啃命令。复制下面这句话，连同仓库地址，发给任意一个能执行命令的助手（Claude Code、ChatGPT、DeepSeek、Codex、Cursor 都可以）：
 
 > 帮我部署这个项目，装好后把手机端的导入链接发给我：https://github.com/baifagg/legado-tts-server
 
