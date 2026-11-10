@@ -23,6 +23,10 @@ The model runs on your own graphics card — no text leaves your machine, and yo
 It ships with **OmniVoice 0.8B**, 20 Chinese voices, and stays smooth up to 4× playback speed.
 At the common 2.14× listening speed it synthesizes roughly **twice as fast as playback**.
 
+> Works with the **Legado (阅读) Android app**, **HarmonyOS reading apps built on Legado**,
+> and the **open-source 轻页 app** — plus any other reader that implements Legado's TTS engine
+> protocol (test those yourself). See [Client compatibility](#client-compatibility).
+
 ```
 Legado app ──── HTTP ────> localhost:18760 ────> OmniVoice (GPU)
                                 ↓
@@ -78,6 +82,38 @@ On startup the terminal prints:
 
 **On the phone**: Legado → Mine → Reading engines → top-right menu → **Network import** → paste link A.
 That imports all 20 voices plus one offline fallback in a single step.
+
+---
+
+## Client compatibility
+
+This server implements **Legado's HTTP TTS / reading-engine protocol**, so it isn't tied to one app.
+
+| Client | Status | Notes |
+|---|---|---|
+| **Legado (阅读) native app**, Android | ✅ Supported | Primary test target; import as described above |
+| **HarmonyOS reading apps built on Legado** | ✅ Protocol-compatible | Same reading-engine import flow, same link |
+| **Open-source 轻页 app** | ✅ Protocol-compatible | Same; import the same `httpTTS.json` |
+| **Other reading apps** | ⚠️ **Test it yourself** | Not verified here; works only if the app implements Legado's TTS engine protocol |
+
+**How to tell whether an app will work** — check its reading-engine settings for either of these:
+
+1. **"Network import"** that accepts the `httpTTS.json` format
+   → paste `http://<your-ip>:18760/httpTTS-float.json`
+2. **"Custom / online TTS"** where you can supply a URL and a request body
+   → URL `http://<your-ip>:18760/api/tts`, body
+   `text={{encodeURIComponent(speakText)}}&engine=omni&ref=王宝&speakSpeed={{speakSpeed}}&scale=float`
+   (replace `ref=王宝` with the voice you want; one entry per voice)
+
+Both supported → just use it. Only the second → create voices manually.
+
+> **What "test it yourself" means**: only the three clients marked ✅ above have been verified.
+> Other apps that reuse Legado's reading-engine implementation (most Chinese "阅读" forks do)
+> will most likely work, but you need to try. Apps with their own proprietary TTS interface
+> won't work with this server.
+>
+> Quick self-test: after wiring it up, play a passage containing numbers (e.g. "15%", "1/3").
+> If you hear audio and it reads "百分之十五" / "三分之一", the integration is good.
 
 ---
 
