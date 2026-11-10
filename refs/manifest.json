@@ -1,0 +1,202 @@
+[
+  {
+    "key": "王宝",
+    "label": "王宝",
+    "desc": "男 · 新闻播报 · 146Hz",
+    "usage": "沉稳有力，适合正剧、都市",
+    "file": "王宝.wav",
+    "text": "蔡斌之后王宝泉走马上任",
+    "seconds": 3.13,
+    "source": "AISHELL-3/SSB02730001"
+  },
+  {
+    "key": "云松",
+    "label": "云松",
+    "desc": "男 · 温和 · 143Hz",
+    "usage": "松弛自然，适合日常、轻松题材",
+    "file": "云松.wav",
+    "text": "共同享受奔跑带来的乐趣",
+    "seconds": 3.34,
+    "source": "AISHELL-3/SSB06290004"
+  },
+  {
+    "key": "陆明",
+    "label": "陆明",
+    "desc": "男 · 冷静 · 141Hz",
+    "usage": "克制冷静，适合悬疑、推理",
+    "file": "陆明.wav",
+    "text": "苹果市值超越六千亿美元",
+    "seconds": 3.05,
+    "source": "AISHELL-3/SSB07840001"
+  },
+  {
+    "key": "老宋",
+    "label": "老宋",
+    "desc": "男 · 低沉 · 127Hz",
+    "usage": "低音浑厚，适合历史、武侠",
+    "file": "老宋.wav",
+    "text": "南京市浦口区的街道有什么",
+    "seconds": 3.01,
+    "source": "AISHELL-3/SSB06030001"
+  },
+  {
+    "key": "顾川",
+    "label": "顾川",
+    "desc": "男 · 严肃 · 146Hz",
+    "usage": "严肃端方，适合严肃文学",
+    "file": "顾川.wav",
+    "text": "证监会共受理涉嫌老鼠仓案件",
+    "seconds": 4.09,
+    "source": "AISHELL-3/SSB03940003"
+  },
+  {
+    "key": "沈约",
+    "label": "沈约",
+    "desc": "女 · 柔和 · 240Hz",
+    "usage": "柔和细腻，适合言情、都市",
+    "file": "沈约.wav",
+    "text": "降低中小企业资产负债率",
+    "seconds": 2.92,
+    "source": "AISHELL-3/SSB04270002"
+  },
+  {
+    "key": "林清",
+    "label": "林清",
+    "desc": "女 · 清亮 · 226Hz",
+    "usage": "清亮明快，适合现代言情",
+    "file": "林清.wav",
+    "text": "融资环境的变化将加剧房企分化",
+    "seconds": 3.98,
+    "source": "AISHELL-3/SSB05020003"
+  },
+  {
+    "key": "苏禾",
+    "label": "苏禾",
+    "desc": "女 · 讲故事 · 267Hz",
+    "usage": "叙述感强，适合儿童、故事",
+    "file": "苏禾.wav",
+    "text": "工作后一坐就经常十几个小时",
+    "seconds": 3.57,
+    "source": "AISHELL-3/SSB03850001"
+  },
+  {
+    "key": "白露",
+    "label": "白露",
+    "desc": "女 · 优雅 · 211Hz",
+    "usage": "端庄从容，适合古典、文艺",
+    "file": "白露.wav",
+    "text": "刘嘉玲虽然来不及准备贺礼",
+    "seconds": 3.07,
+    "source": "AISHELL-3/SSB00330001"
+  },
+  {
+    "key": "秦川",
+    "label": "秦川",
+    "desc": "男 · 极低音 · 107Hz",
+    "usage": "低沉厚重，适合历史、武侠、老年角色",
+    "file": "秦川.wav",
+    "text": "迎接世界各地的外国领导人",
+    "seconds": 2.87,
+    "source": "AISHELL-3/SSB0623"
+  },
+  {
+    "key": "程越",
+    "label": "程越",
+    "desc": "男 · 中性偏低 · 143Hz",
+    "usage": "稳重自然，适合都市、职场",
+    "file": "程越.wav",
+    "text": "共同享受奔跑带来的乐趣",
+    "seconds": 2.74,
+    "source": "AISHELL-3/SSB0629"
+  },
+  {
+    "key": "温言",
+    "label": "温言",
+    "desc": "女 · 低音 · 200Hz",
+    "usage": "低柔温和，适合言情、家庭",
+    "file": "温言.wav",
+    "text": "上市房企积极在境内寻求融资途径",
+    "seconds": 3.29,
+    "source": "AISHELL-3/SSB0038"
+  },
+  {
+    "key": "叶澜",
+    "label": "叶澜",
+    "desc": "女 · 中低 · 203Hz",
+    "usage": "温柔偏沉，适合年代、回忆",
+    "file": "叶澜.wav",
+    "text": "你说将来约翰叫我们跟约翰进厕所",
+    "seconds": 3.45,
+    "source": "AISHELL-3/SSB0539"
+  },
+  {
+    "key": "许南",
+    "label": "许南",
+    "desc": "女 · 中音 · 195Hz",
+    "usage": "清亮自然，适合现代言情",
+    "file": "许南.wav",
+    "text": "因此该办法的制定填补了这一空白",
+    "seconds": 3.46,
+    "source": "AISHELL-3/SSB0748"
+  },
+  {
+    "key": "男中年",
+    "label": "男中年",
+    "desc": "男 · 中年",
+    "usage": "成熟稳重，适合职场、现实主义",
+    "file": "男中年.wav",
+    "text": "他端起茶杯抿了一口，慢慢把目光移向窗外。",
+    "seconds": 5.5,
+    "source": "voice-design"
+  },
+  {
+    "key": "男老年",
+    "label": "男老年",
+    "desc": "男 · 老年",
+    "usage": "苍老深沉，适合历史、传记、回忆录",
+    "file": "男老年.wav",
+    "text": "人这一辈子啊，总要经历些风风雨雨才明白。",
+    "seconds": 5.23,
+    "source": "voice-design"
+  },
+  {
+    "key": "男评书",
+    "label": "男评书",
+    "desc": "男 · 评书",
+    "usage": "抑扬顿挫，适合武侠、评书、章回体",
+    "file": "男评书.wav",
+    "text": "话说天下大势，分久必合，合久必分。",
+    "seconds": 3.89,
+    "source": "voice-design"
+  },
+  {
+    "key": "女中年",
+    "label": "女中年",
+    "desc": "女 · 中年",
+    "usage": "成熟温和，适合言情、家庭、都市",
+    "file": "女中年.wav",
+    "text": "她放下手里的活计，抬头看了看墙上的钟。",
+    "seconds": 4.77,
+    "source": "voice-design"
+  },
+  {
+    "key": "女老年",
+    "label": "女老年",
+    "desc": "女 · 老年",
+    "usage": "慈祥沧桑，适合年代文、亲情",
+    "file": "女老年.wav",
+    "text": "那年冬天特别冷，我记得清清楚楚。",
+    "seconds": 4.1,
+    "source": "voice-design"
+  },
+  {
+    "key": "女评书",
+    "label": "女评书",
+    "desc": "女 · 评书",
+    "usage": "铿锵起伏，适合武侠、传奇、故事会",
+    "file": "女评书.wav",
+    "text": "话说那一年，江湖上忽然传出个惊人的消息。",
+    "seconds": 5.09,
+    "source": "voice-design"
+  }
+]

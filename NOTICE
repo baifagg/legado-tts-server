@@ -1,0 +1,86 @@
+# 第三方组件与许可声明
+
+本项目**代码**采用 MIT（见 LICENSE）。但它依赖的模型与素材有各自的许可，**使用前必须了解**。
+
+---
+
+## 1. OmniVoice 模型 —— CC-BY-NC，不可商用 ⚠️
+
+| 项 | 说明 |
+|---|---|
+| 仓库 | https://github.com/k2-fsa/OmniVoice |
+| 权重 | https://huggingface.co/k2-fsa/OmniVoice |
+| **代码许可** | Apache-2.0 |
+| **权重许可** | **CC-BY-NC**（非商业性使用） |
+| 作者 | k2-fsa 团队（含 Daniel Povey） |
+
+模型卡原文：
+
+> Our code is released under the Apache 2.0 License. The pre-trained model is
+> licensed under the **CC-BY-NC** due to constraints from its training data (e.g., Emilia).
+
+**这意味着**：
+
+- ✅ 个人听书、学习、研究、内部使用 —— 没问题
+- ❌ 对外提供收费服务、嵌入商业产品、SaaS 售卖 —— **需要另行取得授权**
+- ⚠️ 本项目的 MIT 许可**不覆盖**模型权重，两者独立
+
+如果你要商用，需要：
+1. 联系 k2-fsa 取得 OmniVoice 权重的商业授权，或
+2. 换用可商用的 TTS 模型（如 VoxCPM2 全 Apache-2.0、CosyVoice 3 Apache-2.0、GPT-SoVITS MIT）
+
+---
+
+## 2. AISHELL-3 语料 —— Apache-2.0
+
+| 项 | 说明 |
+|---|---|
+| 来源 | https://www.openslr.org/93/ |
+| 许可 | **Apache-2.0** |
+| 用途 | 本仓库 `refs/` 下 14 个音色的参考音频（王宝、云松、陆明、老宋、顾川、沈约、林清、苏禾、白露、秦川、程越、温言、叶澜、许南） |
+
+Apache-2.0 允许再分发与修改，需保留本声明。原始语料为新闻朗读录音，已裁剪为 2.7–4.1 秒片段并做峰值归一化。
+
+如权利人认为不妥，请联系删除。
+
+---
+
+## 3. voice-design 生成的 6 个音色
+
+`男中年 / 男老年 / 男评书 / 女中年 / 女老年 / 女评书` 这 6 个参考音频是用 OmniVoice 的
+voice-design 功能（`instruct` 参数）生成的，不是真人录音。
+
+**它们的许可随 OmniVoice 权重走，同样受 CC-BY-NC 约束。**
+
+---
+
+## 4. Python 依赖
+
+| 包 | 许可 |
+|---|---|
+| torch / torchaudio | BSD-3-Clause |
+| transformers | Apache-2.0 |
+| fastapi | MIT |
+| uvicorn | BSD-3-Clause |
+| soundfile | BSD-3-Clause |
+| numpy | BSD-3-Clause |
+| httpx | BSD-3-Clause |
+| imageio-ffmpeg | BSD-2-Clause（内含 ffmpeg 二进制，LGPL/GPL，按 ffmpeg 自身许可） |
+| omnivoice | Apache-2.0 |
+
+---
+
+## 5. 客户端
+
+本项目为 [Legado / 阅读](https://github.com/gedoor/legado)（GPL-3.0）提供 TTS 后端。
+本项目与 Legado 无隶属关系，仅通过 HTTP 协议对接。
+
+---
+
+## 6. 合规提醒
+
+- **不要**用本服务克隆他人声音做冒充、诈骗、伪造音频
+- **不要**把未授权的版权文本合成后传播
+- 对外提供服务前，先确认模型权重的许可范围
+
+以上为事实陈述，不构成法律意见。商用前请咨询专业人士。

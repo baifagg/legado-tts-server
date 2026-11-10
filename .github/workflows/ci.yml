@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / py${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        python: [ "3.10", "3.11", "3.12" ]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      # 只装 Web 层依赖：单元测试不加载模型，所以不需要 torch（省 2.5 GB 和几分钟）
+      - name: Install light deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install fastapi uvicorn httpx soundfile numpy
+
+      - name: Compile check
+        run: python -m compileall -q server.py worker.py text_front.py build_tts_json.py install.py run.py doctor.py
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Installer help
+        run: python install.py --help
+
+      - name: Doctor runs (expect non-zero until model installed, but must not crash)
+        shell: bash
+        run: |
+          python doctor.py --json > doctor.json || true
+          python -c "import json;d=json.load(open('doctor.json'));print('verdict:',d['verdict']);[print(c['item'],c['status']) for c in d['checks']]"

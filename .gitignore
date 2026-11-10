@@ -1,0 +1,43 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+
+# ---- 模型权重（3 GB，不入库；由 install.py 下载）----
+models/
+*.safetensors
+*.ckpt
+*.bin
+*.pt
+*.pth
+
+# ---- 运行时产物 ----
+cache/
+logs/
+*.log
+*.wav.tmp
+*.tmp
+*.part
+
+# ---- 保留参考音频（refs 下必须入库）----
+!refs/*.wav
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 本地配置 ----
+config.json
+.env
+
+# ---- 测试产物 ----
+.pytest_cache/
+.coverage
+htmlcov/

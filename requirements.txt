@@ -1,0 +1,30 @@
+# 说明：torch / torchaudio 需要按你的显卡选择对应索引单独安装，
+#       不要直接 pip install -r requirements.txt 了事。
+#
+# 一键安装（推荐，会自动选对 torch）：
+#     python install.py
+#
+# 手动安装顺序：
+#     # NVIDIA
+#     pip install torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
+#     # Apple Silicon / CPU
+#     pip install torch==2.8.0 torchaudio==2.8.0
+#     pip install -r requirements.txt
+#
+# 其他索引：
+#     ROCm:   https://download.pytorch.org/whl/rocm6.2
+#     CPU:    https://download.pytorch.org/whl/cpu
+
+fastapi>=0.115
+uvicorn>=0.30
+httpx>=0.27
+soundfile>=0.12
+numpy>=1.26
+imageio-ffmpeg>=0.5
+huggingface_hub>=0.26
+
+# TTS 引擎（会连带安装 transformers / librosa / gradio 等）
+omnivoice==0.2.1
+
+# 可选：跑文本相似度回归测试时需要
+# faster-whisper>=1.0
