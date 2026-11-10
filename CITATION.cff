@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "如果这个项目对你的工作有帮助，欢迎引用。"
+title: "Legado TTS Server"
+abstract: "本地听书 TTS 服务：基于 OmniVoice 0.8B 的离线中文语音合成后端，为阅读（Legado）及其衍生客户端提供朗读引擎接口，内置 20 个中文音色与中文数字读法前端。"
+authors:
+  - alias: baifagg
+    name: baifagg
+    website: "https://github.com/baifagg"
+repository-code: "https://github.com/baifagg/legado-tts-server"
+url: "https://github.com/baifagg/legado-tts-server"
+license: MIT
+keywords:
+  - text-to-speech
+  - tts
+  - chinese
+  - omnivoice
+  - legado
+  - audiobook
+  - offline
+  - local-inference
+references:
+  - type: software
+    title: "OmniVoice: Towards Omnilingual Zero-Shot Text-to-Speech with Diffusion Language Models"
+    authors:
+      - family-names: Zhu
+        given-names: Han
+      - family-names: Povey
+        given-names: Daniel
+    repository: "https://github.com/k2-fsa/OmniVoice"
+    url: "https://arxiv.org/abs/2604.00688"
+  - type: software
+    title: "开源轻页 (qingye-reader)"
+    repository: "https://github.com/wip3l/qingye-reader"
+    url: "https://github.com/wip3l/qingye-reader"
+  - type: software
+    title: "Legado (阅读)"
+    repository: "https://github.com/gedoor/legado"
+    url: "https://github.com/gedoor/legado"

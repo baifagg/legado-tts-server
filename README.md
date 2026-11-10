@@ -6,6 +6,8 @@
 
 **把你自己的电脑，变成一台私有有声书服务器。**
 
+作者 [baifagg](https://github.com/baifagg) · 配套客户端 [开源轻页 qingye-reader](https://github.com/wip3l/qingye-reader)
+
 [简体中文](README.md) · [English](README.en.md)
 
 ![Python](https://img.shields.io/badge/Python-3.10–3.12-1f2d3d?style=flat-square)
@@ -21,7 +23,8 @@
 
 内置 **OmniVoice 0.8B**，20 个中文音色，支持到 4 倍速听书，实测 **2.14× 时合成速度是播放的 2 倍**。
 
-> 兼容 **阅读（Legado）原生 App**、**基于阅读开发的鸿蒙应用**、**开源轻页 App**，
+> 兼容 **阅读（Legado）原生 App**、**基于阅读开发的鸿蒙应用**、
+> **[开源轻页 qingye-reader](https://github.com/wip3l/qingye-reader)**，
 > 以及其他实现了 Legado 朗读引擎协议的阅读类 App（后者请自行测试）。
 > 详见 [客户端兼容](#客户端兼容)。
 
@@ -90,8 +93,24 @@ python run.py         # 启动
 |---|---|---|
 | **阅读 / Legado 原生 App**（Android） | ✅ 已适配 | 主力测试环境，导入方式见上一节 |
 | **基于阅读开发的鸿蒙应用**（HarmonyOS） | ✅ 协议通用 | 朗读引擎的导入方式与原生 App 一致，粘贴同一条链接 |
-| **开源轻页 App** | ✅ 协议通用 | 同上，网络导入同一条 `httpTTS.json` |
+| **[开源轻页 qingye-reader](https://github.com/wip3l/qingye-reader)**（HarmonyOS NEXT） | ✅ 已适配 | 原生鸿蒙阅读应用，兼容 Legado 书源规则；朗读引擎导入同一条 `httpTTS.json` |
 | **其他阅读类 App** | ⚠️ **自行测试** | 本项目未逐一验证；只要底层支持 Legado 朗读引擎协议即可用 |
+
+### 推荐客户端
+
+**开源轻页（qingye-reader）** —— 如果你在 HarmonyOS NEXT / 鸿蒙设备上听书，推荐用它：
+[github.com/wip3l/qingye-reader](https://github.com/wip3l/qingye-reader)
+
+- ArkTS / ArkUI 开发的鸿蒙原生阅读应用，面向手机、平板和 PC/2in1
+- 兼容 Legado（阅读）书源规则，自有原生书源格式
+- 支持本地 TXT / EPUB / MOBI / PDF、OPDS、WebDAV、局域网阅读
+- 自带朗读（TTS）功能，可直接对接本服务的朗读引擎
+- GPL-3.0 开源，文档站：<https://manual.icynol.com/>
+
+它和本服务是**互补关系**：轻页负责「读什么、怎么翻页」，本服务负责「用什么声音、读得多准多快」。
+
+**阅读 / Legado（原版）** —— 安卓端老牌阅读器，本服务的主力适配目标：
+[github.com/gedoor/legado](https://github.com/gedoor/legado)
 
 **怎么判断一个 App 能不能用** —— 看它的朗读引擎是否支持下面任一种：
 
@@ -202,7 +221,10 @@ legado-tts-server/
 
 ## 致谢
 
-[k2-fsa/OmniVoice](https://github.com/k2-fsa/OmniVoice) · [AISHELL-3](https://www.openslr.org/93/) · [Legado 阅读](https://github.com/gedoor/legado)
+- [k2-fsa/OmniVoice](https://github.com/k2-fsa/OmniVoice) —— 0.8B 多语言零样本 TTS 模型
+- [AISHELL-3](https://www.openslr.org/93/) —— 中文多说话人语料（参考音色来源）
+- [gedoor/legado](https://github.com/gedoor/legado) —— 开源阅读器，本项目实现其朗读引擎协议
+- [wip3l/qingye-reader](https://github.com/wip3l/qingye-reader) —— 开源轻页，HarmonyOS NEXT 原生阅读应用
 
 <div align="center">
 <sub>如果这个项目帮你省下了订阅费，欢迎点个 Star。</sub>

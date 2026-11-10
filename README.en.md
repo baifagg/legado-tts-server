@@ -6,6 +6,8 @@
 
 **Turn your own PC into a private audiobook server.**
 
+by [baifagg](https://github.com/baifagg) · pairs with [开源轻页 qingye-reader](https://github.com/wip3l/qingye-reader)
+
 [简体中文](README.md) · [English](README.en.md)
 
 ![Python](https://img.shields.io/badge/Python-3.10–3.12-1f2d3d?style=flat-square)
@@ -24,8 +26,9 @@ It ships with **OmniVoice 0.8B**, 20 Chinese voices, and stays smooth up to 4× 
 At the common 2.14× listening speed it synthesizes roughly **twice as fast as playback**.
 
 > Works with the **Legado (阅读) Android app**, **HarmonyOS reading apps built on Legado**,
-> and the **open-source 轻页 app** — plus any other reader that implements Legado's TTS engine
-> protocol (test those yourself). See [Client compatibility](#client-compatibility).
+> and **[开源轻页 qingye-reader](https://github.com/wip3l/qingye-reader)** — plus any other
+> reader that implements Legado's TTS engine protocol (test those yourself).
+> See [Client compatibility](#client-compatibility).
 
 ```
 Legado app ──── HTTP ────> localhost:18760 ────> OmniVoice (GPU)
@@ -93,8 +96,25 @@ This server implements **Legado's HTTP TTS / reading-engine protocol**, so it is
 |---|---|---|
 | **Legado (阅读) native app**, Android | ✅ Supported | Primary test target; import as described above |
 | **HarmonyOS reading apps built on Legado** | ✅ Protocol-compatible | Same reading-engine import flow, same link |
-| **Open-source 轻页 app** | ✅ Protocol-compatible | Same; import the same `httpTTS.json` |
+| **[开源轻页 qingye-reader](https://github.com/wip3l/qingye-reader)** (HarmonyOS NEXT) | ✅ Supported | Native HarmonyOS reader, compatible with Legado book-source rules; import the same `httpTTS.json` |
 | **Other reading apps** | ⚠️ **Test it yourself** | Not verified here; works only if the app implements Legado's TTS engine protocol |
+
+### Recommended clients
+
+**开源轻页 (qingye-reader)** — the recommended companion on HarmonyOS NEXT devices:
+[github.com/wip3l/qingye-reader](https://github.com/wip3l/qingye-reader)
+
+- Native HarmonyOS reading app written in ArkTS / ArkUI, for phones, tablets and PC/2-in-1
+- Compatible with Legado (阅读) book-source rules, with its own native book-source format
+- Supports local TXT / EPUB / MOBI / PDF, OPDS, WebDAV and LAN libraries
+- Built-in TTS that can point straight at this server's reading-engine endpoint
+- GPL-3.0, docs at <https://manual.icynol.com/>
+
+The two are complementary: 轻页 decides *what* you read and how you navigate it;
+this server decides *how it sounds* — which voice, how accurate, how fast.
+
+**阅读 / Legado (original)** — the veteran Android reader this server was primarily built for:
+[github.com/gedoor/legado](https://github.com/gedoor/legado)
 
 **How to tell whether an app will work** — check its reading-engine settings for either of these:
 
@@ -206,7 +226,10 @@ Full attribution in [NOTICE](NOTICE). Read it before any commercial use.
 
 ## Credits
 
-[k2-fsa/OmniVoice](https://github.com/k2-fsa/OmniVoice) · [AISHELL-3](https://www.openslr.org/93/) · [Legado](https://github.com/gedoor/legado)
+- [k2-fsa/OmniVoice](https://github.com/k2-fsa/OmniVoice) — 0.8B multilingual zero-shot TTS model
+- [AISHELL-3](https://www.openslr.org/93/) — Mandarin multi-speaker corpus (source of the reference voices)
+- [gedoor/legado](https://github.com/gedoor/legado) — the open-source reader whose TTS engine protocol this project implements
+- [wip3l/qingye-reader](https://github.com/wip3l/qingye-reader) — 开源轻页, a native HarmonyOS NEXT reading app
 
 <div align="center">
 <sub>If this saved you a subscription, a star is appreciated.</sub>

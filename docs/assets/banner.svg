@@ -58,8 +58,9 @@
 
   <!-- 文案 -->
   <g font-family="Segoe UI, Helvetica Neue, PingFang SC, Microsoft YaHei, Arial, sans-serif">
-    <text x="72" y="112" fill="#F5F6F7" font-size="46" font-weight="650" letter-spacing="-1">Legado TTS Server</text>
-    <text x="72" y="158" fill="#9BA1AC" font-size="19" font-weight="400" letter-spacing="0.2">本地听书语音服务 · OmniVoice 0.8B · 20 个中文音色 · 完全离线</text>
+    <text x="72" y="72" fill="#D9A05B" font-size="12" font-weight="600" letter-spacing="3.2" fill-opacity="0.85">BAIFAGG</text>
+    <text x="72" y="118" fill="#F5F6F7" font-size="46" font-weight="650" letter-spacing="-1">Legado TTS Server</text>
+    <text x="72" y="162" fill="#9BA1AC" font-size="19" font-weight="400" letter-spacing="0.2">本地听书语音服务 · OmniVoice 0.8B · 20 个中文音色 · 完全离线</text>
 
     <g transform="translate(72,196)" font-size="13" font-weight="500">
       <rect x="0" y="0" width="104" height="30" rx="15" fill="#D9A05B" fill-opacity="0.12" stroke="#D9A05B" stroke-opacity="0.35"/>

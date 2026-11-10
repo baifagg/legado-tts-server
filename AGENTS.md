@@ -34,7 +34,7 @@ python run.py          # 启动
 本地 TTS 服务，给手机「阅读 / Legado」App 提供合成语音。双进程架构：
 
 > **协议是通用的**：服务端只实现 Legado 的 HTTP TTS / 朗读引擎协议，
-> 因此 **阅读原生 App**、**基于阅读开发的鸿蒙应用**、**开源轻页 App** 都可用同一条导入链接。
+> 因此 **阅读原生 App**、**基于阅读开发的鸿蒙应用**、**[开源轻页 qingye-reader](https://github.com/wip3l/qingye-reader)** 都可用同一条导入链接。
 > **其他阅读类 App 需用户自行测试**（判断标准：是否支持 `httpTTS.json` 网络导入，
 > 或能自定义 `http://IP:18760/api/tts` + 请求体）。不要向用户承诺未经测试的客户端。
 
