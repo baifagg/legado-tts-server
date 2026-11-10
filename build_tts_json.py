@@ -19,6 +19,7 @@
 from __future__ import annotations
 
 import json
+import os
 import time
 from pathlib import Path
 
@@ -26,8 +27,25 @@ BASE = Path(__file__).resolve().parent
 REFS = BASE / "refs"
 NOW_MS = int(time.time() * 1000)
 
-LAN_IP = "192.168.110.57"
-PORT = 18760
+def _detect_lan_ip() -> str:
+    """自动探测本机局域网 IP（不硬编码，换机器/换网段都能用）。"""
+    import socket
+
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        s.connect(("8.8.8.8", 80))
+        return s.getsockname()[0]
+    except Exception:
+        try:
+            return socket.gethostbyname(socket.gethostname())
+        except Exception:
+            return "127.0.0.1"
+    finally:
+        s.close()
+
+
+LAN_IP = os.environ.get("TTS_LAN_IP") or _detect_lan_ip()
+PORT = int(os.environ.get("TTS_PORT", 18760))
 
 # 音色元数据用手写描述，比 manifest 里的机械描述更适合在 App 里辨认
 # 2026-11-10：扩充到 20 个音色（删 周野/齐峰/姜月/夏禾/小满，新增 5 个真人 + 6 个设计音色）

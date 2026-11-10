@@ -41,3 +41,6 @@ config.json
 .pytest_cache/
 .coverage
 htmlcov/
+# ---- 生成物（由 build_tts_json.py 按本机 IP 生成，不入库）----
+httpTTS.json
+httpTTS-float.json
