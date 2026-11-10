@@ -12,13 +12,21 @@ by [baifagg](https://github.com/baifagg)
 
 ---
 
-## 是什么
+电脑上跑一个中文语音合成服务，手机上的阅读软件连过来听书。模型是 OmniVoice 0.8B，带 20 个中文音色，一句大概一秒多。
 
-装在自己电脑上的中文语音合成服务。手机上的阅读软件通过 WiFi 把文字发过来，电脑用显卡合成语音再传回去，一句大概一秒多。
+## 最省事的办法：把仓库丢给 AI
 
-模型是 OmniVoice 0.8B，带了 20 个中文音色。服务端走的是阅读（Legado）的朗读引擎协议，支持这套协议的阅读软件都能接。
+不用自己啃命令。复制下面这句话，连同仓库地址，发给任意一个能执行命令的助手 —— Claude Code、ChatGPT、DeepSeek、Codex、Cursor 都可以：
 
-## 怎么装
+> 帮我部署这个项目，装好后把手机端的导入链接发给我：https://github.com/baifagg/legado-tts-server
+
+它会自己判断你的显卡、装对应版本的 PyTorch、下载模型、启动服务，最后把导入链接给你。
+
+中途报错也不用自己研究，把报错原文粘回去让它接着修就行。仓库里的 [AGENTS.md](AGENTS.md) 就是为这种情况写的：分步命令、每一步的预期输出、常见故障的排查路径都在里面。agent 读了就知道怎么处理，你不用读。
+
+装完之后想调音色、换端口、看日志，照样问它。
+
+## 想自己装的话
 
 要 Python 3.10 到 3.12。
 
@@ -36,11 +44,11 @@ python install.py
 python doctor.py
 ```
 
-有红色项按提示修，全过了再往下。以后哪一步出问题也先跑它，输出里一般直接写了怎么修。更细的排障在 [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)，给 AI 助手看的部署手册在 [AGENTS.md](AGENTS.md)。
+有红色项按提示修，全过了再往下。以后哪一步出问题也先跑它，输出里一般直接写了怎么修。
 
-显卡方面，NVIDIA 6 GB 显存以上最顺。Apple Silicon 走 MPS 也可以。AMD 在 Linux 上能折腾 ROCm，Windows 上只能跑 CPU。没有独显也能用，一句五到十几秒，试听可以，长时间听不划算。型号对照在 [docs/GPU-COMPATIBILITY.md](docs/GPU-COMPATIBILITY.md)。
+显卡这块，NVIDIA 6 GB 显存以上最顺。Apple Silicon 走 MPS 也可以。AMD 在 Linux 上能折腾 ROCm，Windows 上只能跑 CPU。没有独显也能用，一句五到十几秒，试听可以，长时间听不划算。型号对照在 [docs/GPU-COMPATIBILITY.md](docs/GPU-COMPATIBILITY.md)。
 
-## 怎么用
+## 接到阅读软件里
 
 ```bash
 python run.py
@@ -66,9 +74,9 @@ python run.py --device cpu
 
 <img src="docs/assets/console.png" alt="试听页面" width="620">
 
-接口参数和报错码在 [docs/API.md](docs/API.md)。
+接口参数和报错码在 [docs/API.md](docs/API.md)，更细的排障在 [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)。
 
-## 关联项目
+## 配套的阅读软件
 
 [阅读 / Legado](https://github.com/gedoor/legado) 是这套协议的原版实现，安卓上的老牌阅读器。这个服务最早就是给自己用 Legado 听书写的。
 

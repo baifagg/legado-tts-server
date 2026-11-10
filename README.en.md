@@ -12,13 +12,21 @@ by [baifagg](https://github.com/baifagg)
 
 ---
 
-## What it is
+A Chinese text-to-speech service that runs on your own computer. A reading app on your phone connects over Wi-Fi and streams the audio. The model is OmniVoice 0.8B with 20 Chinese voices, about a second per sentence.
 
-A Chinese text-to-speech service that runs on your own computer. A reading app on your phone sends text over Wi-Fi, the computer synthesizes it on the GPU and sends the audio back. About a second per sentence.
+## Easiest path: hand the repo to an AI agent
 
-The model is OmniVoice 0.8B with 20 Chinese voices. The server implements Legado's reading-engine protocol, so any reader that speaks that protocol can use it.
+You don't have to work through the commands yourself. Copy this line, together with the repo URL, into any assistant that can run shell commands — Claude Code, ChatGPT, DeepSeek, Codex, Cursor all work:
 
-## Install
+> Set this project up for me, then give me the import link for my phone: https://github.com/baifagg/legado-tts-server
+
+It will check your GPU, install the matching PyTorch build, download the model, start the service, and hand you the import link.
+
+If something fails, paste the error back and let it keep fixing. That's what [AGENTS.md](AGENTS.md) is for: step-by-step commands, the expected output at each step, and a fault tree for the common failures. The agent reads it so you don't have to.
+
+Once it's running, voice selection, port changes and log reading can all go to the agent too.
+
+## If you'd rather do it yourself
 
 Python 3.10 to 3.12.
 
@@ -36,11 +44,11 @@ Then run the check:
 python doctor.py
 ```
 
-Fix anything marked red before moving on. Run it again whenever something breaks; the output usually says what to do. Longer troubleshooting notes are in [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md), and the agent-facing deployment manual is [AGENTS.md](AGENTS.md).
+Fix anything marked red before moving on. Run it again whenever something breaks; the output usually says what to do.
 
 On the GPU side: NVIDIA with 6 GB or more VRAM works best. Apple Silicon runs on MPS. AMD works through ROCm on Linux only; on Windows it falls back to CPU. CPU-only is usable but slow, five to fifteen seconds per sentence. Per-model details in [docs/GPU-COMPATIBILITY.md](docs/GPU-COMPATIBILITY.md).
 
-## Usage
+## Connecting your reading app
 
 ```bash
 python run.py
@@ -66,9 +74,9 @@ Open `http://127.0.0.1:18760/` in a browser to audition each voice before pickin
 
 <img src="docs/assets/console.png" alt="Audition page" width="620">
 
-API parameters and error codes are in [docs/API.md](docs/API.md).
+API parameters and error codes are in [docs/API.md](docs/API.md); longer troubleshooting notes are in [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
 
-## Related projects
+## Reading apps that pair with it
 
 [Legado (阅读)](https://github.com/gedoor/legado) is the original implementation of the protocol, a long-standing Android reader. This service started as a way to listen to books in it.
 
